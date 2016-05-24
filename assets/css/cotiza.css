@@ -1,0 +1,256 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/04/2016, 03:52:32 PM
+    Author     : tono
+*/
+.form_cotiza { 
+    
+    }
+@media only screen and (max-width:768px) { 
+.form_cotiza { 
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+.form_cotiza { 
+    width: 370px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.form_cotiza { 
+    width: 320px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.form_cotiza { 
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+}
+
+//form2
+.form_cotiza2 { 
+    font-size: 22px;
+    }
+@media only screen and (max-width:768px) { 
+.form_cotiza2 { 
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+.form_cotiza2 { 
+    width: 370px;
+    margin-left: 26px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.form_cotiza2 { 
+    width: 320px;
+    margin-left: 26px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.form_cotiza2 { 
+    width: 280px;
+    margin-left: 26px;
+    margin-right: 20px;
+    }
+
+}
+
+
+.combo_cotiza { 
+    
+    }
+@media only screen and (max-width:768px) { 
+.combo_cotiza { 
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+.combo_cotiza { 
+    width: 370px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.combo_cotiza { 
+   width: 320px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.combo_cotiza { 
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+}
+//coombo_2
+.combo_cotiza { 
+    
+    }
+@media only screen and (max-width:768px) { 
+.combo_cotiza2 { 
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+.combo_cotiza2 { 
+    width: 370px;
+    margin-left: 26px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.combo_cotiza2 { 
+   width: 320px;
+    margin-left: 26px;
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.combo_cotiza2 { 
+    width: 280px;
+    margin-left: 26px;
+    margin-right: 20px;
+    }
+
+}
+//fecha
+.texto_fecha { 
+    text-align: center;
+    }
+@media only screen and (max-width:768px) { 
+.texto_fecha { 
+         margin-left: 75px;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+.texto_fecha { 
+            margin-left: 115px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.texto_fecha { 
+        margin-left: 97px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.texto_fecha { 
+    
+    margin-left: 75px;
+    }
+}
+
+.calendario_cotiza { 
+    
+    }
+@media only screen and (max-width:768px) { 
+.calendario_cotiza { 
+     width: 396px;
+        margin-left: 12px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width:480px) { 
+.calendario_cotiza { 
+        width: 396px;
+        margin-left: 12px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.calendario_cotiza { 
+    width: 346px;
+        margin-left: 12px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.calendario_cotiza { 
+        width: 305px;
+        margin-left: 12px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+
+.texto_cotiza{ 
+   
+    }
+@media only screen and (max-width:768px) { 
+.texto_cotiza{ 
+    margin-top: -40px;
+    margin-left: 8px;
+    margin-bottom: -10px;
+    }
+}
+@media only screen and (max-width:480px) { 
+.texto_cotiza{ 
+    margin-top: -40px;
+    margin-left: 8px;
+    margin-bottom: -10px;
+    }
+}
+
+@media only screen and (max-width:360px) { 
+.texto_cotiza{ 
+    margin-top: -40px;
+    margin-left: 8px;
+    margin-bottom: -10px;
+    }
+}
+
+@media only screen and (max-width:320px) { 
+.texto_cotiza{ 
+    margin-top: -40px;
+    margin-left: 8px;
+    margin-bottom: -10px;
+    }
+}
