@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-04-2016 a las 23:46:07
+-- Tiempo de generación: 24-05-2016 a las 21:50:00
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -35,19 +35,17 @@ CREATE TABLE IF NOT EXISTS `content` (
   `status` varchar(10) NOT NULL,
   `creation_date` date NOT NULL,
   `modification_date` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `content`
 --
 
 INSERT INTO `content` (`id_content`, `tittle`, `route`, `url`, `description`, `status`, `creation_date`, `modification_date`) VALUES
-(1, 'algo', 'Captura de pantalla de 2016-01-04 00:24:08.png', NULL, ' algo', 'true', '2016-04-06', NULL),
-(2, 'prueba', 'ubuntu005.jpg', NULL, ' prueba', 'true', '2016-04-06', NULL),
-(3, 'prueba', 'front-image.jpg', NULL, ' prueba', 'true', '2016-04-06', NULL),
-(4, 'casa beltrami', 'Captura de pantalla de 2015-10-16 19:44:31.png', NULL, ' casa beltrami', 'true', '2016-04-06', NULL),
-(5, 'captura ', 'IDEADEV', NULL, ' casa beltrami', 'true', '2016-04-06', NULL),
-(6, 'Fulanitos 6', 'front-image.jpg', NULL, 'LGO', 'true', '2016-04-06', NULL);
+(12, 'prueba con if', 'Captura de pantalla de 2016-03-31 13:04:01.png', NULL, ' prueba con if', 'true', '2016-04-07', NULL),
+(13, 'prueba II', 'Captura de pantalla de 2016-04-11 08:33:20.png', NULL, ' prueba', 'true', '2016-04-12', NULL),
+(14, 'lunes', 'Captura de pantalla de 2016-04-17 22:57:03.png', NULL, ' hola', 'true', '2016-04-18', NULL),
+(15, '', 'Captura de pantalla de 2016-04-17 23:13:18.png', NULL, ' ', 'true', '2016-04-18', NULL);
 
 -- --------------------------------------------------------
 
@@ -63,14 +61,7 @@ CREATE TABLE IF NOT EXISTS `content_party_room` (
   `id_service` tinyint(1) DEFAULT NULL,
   `id_sub_service` int(11) NOT NULL,
   `id_event` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `content_party_room`
---
-
-INSERT INTO `content_party_room` (`id`, `id_content`, `id_party_room`, `id_decoration`, `id_service`, `id_sub_service`, `id_event`) VALUES
-(1, 6, 1, 1, NULL, 2, 3);
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -161,7 +152,7 @@ INSERT INTO `party_room` (`id_party_room`, `party_room_name`) VALUES
 CREATE TABLE IF NOT EXISTS `services` (
   `id_service` int(11) NOT NULL,
   `name_service` varchar(25) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `services`
@@ -212,14 +203,15 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `nombre` varchar(45) NOT NULL,
   `user` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `Users`
 --
 
 INSERT INTO `Users` (`id`, `nombre`, `user`, `password`) VALUES
-(0, 'Castro Esparza Jose Antonio', 'tonoescom@gmail.com', '2011301308');
+(1, 'Castro Esparza Jose Antonio', 'tonoescom@gmail.com', '2011301308'),
+(2, 'Mitchel Hernandez', 'sebastiansnhn14@gmail.com', 'sebastiansnhn14');
 
 --
 -- Índices para tablas volcadas
@@ -268,6 +260,12 @@ ALTER TABLE `sub_services`
   ADD PRIMARY KEY (`id_sub_service`);
 
 --
+-- Indices de la tabla `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -275,12 +273,12 @@ ALTER TABLE `sub_services`
 -- AUTO_INCREMENT de la tabla `content`
 --
 ALTER TABLE `content`
-  MODIFY `id_content` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id_content` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `content_party_room`
 --
 ALTER TABLE `content_party_room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT de la tabla `decorations`
 --
@@ -300,12 +298,17 @@ ALTER TABLE `party_room`
 -- AUTO_INCREMENT de la tabla `services`
 --
 ALTER TABLE `services`
-  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `sub_services`
 --
 ALTER TABLE `sub_services`
   MODIFY `id_sub_service` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT de la tabla `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
