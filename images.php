@@ -39,22 +39,9 @@
           <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 	<link id="base-style-responsive" href="css_template/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-	<!-- end: CSS -->
-	
+    	<!-- end: CSS -->
+        <link rel="shortcut icon" href="images/logo_gris.png">
 
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<link id="ie-style" href="css_template/ie.css" rel="stylesheet">
-	<![endif]-->
-	
-	<!--[if IE 9]>
-		<link id="ie9style" href="css_template/ie9.css" rel="stylesheet">
-	<![endif]-->
-		
-	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<!-- end: Favicon -->
 	
 		
 		
@@ -71,7 +58,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-                            <a class="brand" href="#"><span><h2>Casa Beltrami</h2></span></a>
+                            <a class="brand" href="index.html"><span><h2><img src="images/logo_blanco.png" style="height: 60px"></h2></span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -108,36 +95,18 @@
 		<div class="container-fluid-full">
 		<div class="row-fluid">
 				
-			<!-- start: Main Menu -->
+                        <!-- start: Main Menu -->
 			<div id="sidebar-left" class="span2">
-				<div class="nav-collapse sidebar-nav">
-					<ul class="nav nav-tabs nav-stacked main-menu">
-                                            <li><a href="images.php"><i class="icon-upload-alt"></i><span class="hidden-tablet">&nbsp;Subir Imagenes</span></a></li>
-                                            <li>
-                                                        <a class="dropmenu" href="Home.php"><i class="icon-calendar"></i><span >Galeria por salones</span></a>
-							<ul>
-                                                            <li><a class="submenu" href="Lincantos_gallery.php"><i class="icon-glass"></i><span class="hidden-tablet"> L’incanto</span></a></li>
-                                                            <li><a class="submenu" href="Farfalas_gallery.php"><i class="icon-gift"></i><span class="hidden-tablet">Farfala</span></a></li>
-                                                            <li><a class="submenu" href="Bambinos_gallery.php"><i class="icon-gift"></i><span class="hidden-tablet">Bambino</span></a></li>
-								
-							</ul>	
-                                            </li>
-                                            <li>
-                                                <a class="dropmenu" href="gallery_by_service.php"><i class="icon-tags"></i><span >Galería por Servicios</span></a>
-							<ul>
-                                                            <li><a class="submenu" href="rent_furniture_services_gallery.php"><i class="icon-tags"></i><span class="hidden-tablet">Renta de mobiliario</span></a></li>
-                                                            <li><a class="submenu" href="tables_sweets_cheeses_gallery.php"><i class="icon-tags"></i><span class="hidden-tablet">Mesas de dulces y quesos</span></a></li>
-                                                            <li><a class="submenu" href="floral_design_gallery.php"><i class="icon-tags"></i><span class="hidden-tablet">Diseño floral</span></a></li>
-								
-							</ul>	
-                                            </li>
-                                            <li><a href="gallery_by_event.php"><i class="icon-picture"></i><span class="hidden-tablet"> Galería Por Eventos</span></a></li>
-                                            
-                                        </ul>
-				</div>
+                            <div class="nav-collapse sidebar-nav">
+                                    <ul class="nav nav-tabs nav-stacked main-menu">
+                                        <li><a href="images.php"><i class="icon-upload-alt"></i><span class="hidden-tablet">&nbsp;Subir Imagenes</span></a></li>
+                                        <li><a href="drones_gallery.php"><i class="icon-upload-alt"></i><span class="hidden-tablet">&nbsp;Galería Por Drones</span></a></li>
+                                        <li><a href="categories_gallery.php"><i class="icon-upload-alt"></i><span class="hidden-tablet">&nbsp;Galería Por Categorías</span></a></li>
+                                    </ul>
+				</div>   
+			    </div>
 			</div>
 			<!-- end: Main Menu -->
-			
 			<noscript>
 				<div class="alert alert-block span10">
 					<h4 class="alert-heading">Warning!</h4>
@@ -161,7 +130,7 @@
 			<div class="row-fluid">
 			 <p>
                             <center>
-                                <a href="create_file.php" class="btn btn-primary btn-md mar-topbtn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Añadir Nueva Imagen</a><br/>
+                                <a href="create_file.php" class="btn btn-primary btn-md mar-topbtn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Añadir Nuevo Archivo</a><br/>
                             </center>
             </p>
             <table id="example" class="display table table-bordered table-stripe" cellspacing="4"  style="margin-top: 50px">
@@ -171,7 +140,7 @@
                         <th style="text-align: center">Titulo</th>
                         <th style="text-align: center">Imagen</th>
                         <th style="text-align: center"> Estatus</th>
-                        
+                        <th style="text-align: center"> Descripción</th>
                        
                     </tr>
                 </thead>
@@ -185,7 +154,7 @@
 <!--                            <td style="text-align: center;" width="2%" class="mar-toptable"><?php echo $row['id_content'] ?></td>-->
                             <td style="text-align: center;"width="8%"><?php echo $row['tittle'];  ?></td>
                             <td width="10%"><img class="grayscale center-block" src="<?php echo 'php/album/' . $row['route'];?>" style="width: 250px;"></td>
-                            <td style="text-align: center;padding-top: 70px" width="5%">
+                            <td style="text-align: center;" width="5%">
                                 <?php 
                                         if ($row['status']=='true'){
                                             echo 'Activo';
@@ -195,6 +164,7 @@
                                  ?>
                             </td>
                            
+                            <td  style="text-align: center;" width="10%"><?php echo $row['description']?> </td>
                             
                             
                             
