@@ -1,7 +1,7 @@
 $(function () {
     $('#subida').submit(function () {
 
-        var comprobar =$('#foto').val().length*$('#salon').val().length* $('#decoration').val().length*$('#sub_service').val().length*$('#event').val().length* $('#status').val().length*$('#creation_date').val().length;
+       var comprobar = $('#title').val().length* $('#foto').val().length*$('#drone').val().length*$('#category').val().length*$('#creation_date').val().length;	
         
         
         if (comprobar > 0) {
@@ -48,7 +48,7 @@ $(function () {
 
 
             var imagen = document.getElementById("foto").files;
-            if (imagen.length == 0)
+            if (imagen.length === 0)
 
             {
               //  $('#foto').after('<div class="alert alert-danger">No has seleccionado ningun archivo</div>');
@@ -59,19 +59,20 @@ $(function () {
             else
 
             {
-
+                var imagen = document.getElementById("foto").files;
                 for (x = 0; x < imagen.length; x++)
 
                 {
 
 
 
-                    if (imagen[x].type != "image/png" && imagen[x].type != "image/jpg" && imagen[x].type != "image/jpeg" && imagen[x].type != "image/gif")
+                    if (imagen[x].type != "image/png" && imagen[x].type != "image/jpg" && imagen[x].type != "image/jpeg")
 
                     {
-                        //$('#foto').after('<div class="alert alert-danger">El archivo ' + imagen[x].name + '  no es una imagen, selecciona una imagen</div>');
+                        
                         bootbox.alert("El archivo" + imagen[x].name+ " no es una imagen");    
                         return false;
+                          
 
                     }
 
@@ -79,7 +80,7 @@ $(function () {
                     if (imagen[x].size > 1024 * 1024 * 2)
 
                     {
-                        //$('#foto').after('<div class="alert alert-danger">La imagen ' + imagen[x].name + '  pesa mas de 3 MB selescciona otro archivo</div>');
+                        
                         bootbox.alert("El archivo   " + imagen[x].name+ " sobrepasa el peso permitido");    
                         return  false;
                     }

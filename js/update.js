@@ -1,4 +1,5 @@
 $(function(){
+  
 	$('#subida').submit(function(){
 		
 		var comprobar = $('#title').val().length *$('#sust_foto').val().length * $('#sd').val().length *$('#lg').val().length*$('#st').val().length *$('#md').val().length *$('#id_content').val().length ;
