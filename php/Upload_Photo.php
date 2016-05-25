@@ -3,67 +3,23 @@
     error_reporting(E_ALL);
     //query para insertar imagen obtenemos valores por get los cuales los recibimos de query por post
     $title = $_GET['title'];
-    $sd = $_GET['desc'];
+    $desc = $_GET['description'];
     $st = $_GET['status'];
     $cd = $_GET['creation_date'];
-    $decoration = $_GET['decoration'];
-    $event = $_GET['event'];
-    $id_party = $_GET['salon'];
     $foto = trim($_FILES['foto']['name']);
-    echo $title;
-    echo $ingresa;
-    $ingresar = mysqli_query($mysqli, "INSERT INTO content (tittle,route,description,status,creation_date)"
-                             . "VALUES('$title','$foto','$sd','$st','$cd')");
+    $ingresar = mysqli_query($mysqli3, "INSERT INTO content (tittle,route,creation_date)"
+                             . "VALUES('$title','$foto','$cd')");
     move_uploaded_file($_FILES['foto']['tmp_name'], 'album/' . $foto);
-    $id_img = mysqli_insert_id($mysqli); //obtenemos el id del ultimo insert realizado
-    $mysqli->close(); //cerramos la conexió del primer query
-    
+    $id_img = mysqli_insert_id($mysqli3); //obtenemos el id del ultimo insert realizado
+    $mysqli3->close(); //cerramos la conexió del primer query
+    $id_drone=$_GET['drone'];
+    $id_category=$_GET['category'];
     //query para relacionar imagen con galeria(s) 
-    
-     $sub_service = $_GET['sub_service'];
-     if ($sub_service){
-        foreach ($sub_service as $s){
-            if($s ==1  ){
-                $service=1;
-            }elseif($s == 2){
-                $service = 1;
-            }elseif($s== 3){
-                $service =1;
-            }
-            elseif($s== 4){
-                $service =2;
-            }
-            elseif($s== 5){
-                $service =2;
-            }
-            elseif($s== 6){
-                $service =2;
-            }
-            elseif($s== 7){
-                $service =2;
-            }
-            elseif($s== 8){
-                $service =3;
-            }
-            elseif($s== 9){
-                $service =3;
-            }
-            elseif($s== 10){
-                $service =3;
-            }
-            elseif($s== 11){
-                $service =3;
-            }
-            mysqli_query($mysqli2,"INSERT INTO content_party_room (id_content,id_party_room,id_decoration,id_service,id_sub_service,id_event) 
-                VALUES ('".$id_img."','".$id_party."','".$decoration."','".$service."',".mysqli_real_escape_string($mysqli2,$s).",'".$event."')");
-            }
+   
+            mysqli_query($mysqli2,"INSERT INTO content_dron_category (id_content,id_drone,id_category) 
+                VALUES ('".$id_img."','".$id_drone."','".$id_category."')");
+           
             $mysqli2->close(); 
-     
-        }
-//            $relacion = mysqli_query($mysqli2, "INSERT INTO content_party_room (id_content,id_party_room,id_event,service)"
-//                             . "VALUES('$id_img','$id_party','$event','$service')");
-//          
-//            $mysqli2->close(); 
-//       
        
+        
 ?>
